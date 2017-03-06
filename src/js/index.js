@@ -10,19 +10,20 @@ require('zepto-modules/touch');
 module.exports = $;
 
 
-	// $.ajax({
-	//   type: 'GET',
-	//   url: 'localhost:8888/introduce',
-	//   success: function(data) {
-	//   	var html = "";
-	//   	for (var i = 0; i < data.length; i++) {
-	//   		html += "<li>" + data[i].name  +"</li>";
-	//   	};
-	//   	$(".test").html(html);
-	//     console.log(data);
-	//   }
-	// });
-	// console.log("1")
+	$.ajax({
+	  type: 'GET',
+		dataType:'json',
+	  url: "http://www.renxuanxun.online/resume/php/data.php",
+		data:{table: "skill_category"},
+	  success: function(data) {
+			var html = '';
+			for(var i = 0; i < data.length; i++){
+				html += "<li><img class='myicon' src="+data[i].image+"><div class='myflex'><div class='star_flex'><span class='skill_title'>"+data[i].name+"</span><span>"+data[i].stars+"</span></div><span class='gray'>"+ data[i].content +"</span></div></li>"
+			}
+			$('#scroller ul').html(html);
+	  }
+	});
+
 var isPlay = true;
 $('.music_icon').on('tap', function(){
 	if(isPlay){
@@ -45,14 +46,10 @@ $('.music_icon').on('tap', function(){
 //     console.log(data);
 //   }
 // });
-if(localStorage.notFirst){
-	$(".swiper-container").hide();
-	$("#mainContent").show();
-	
-}else{
+
 	$(".swiper-container").show();
 	$("#mainContent").hide();
-}
+
 
 
 // 引入swiper模块
@@ -128,24 +125,73 @@ $('#enter').click(function(){
 
    
 
-$("#footer div").tap(function(){
-	var apiTarget = $(this).attr("id");
-	var apiUrl = "http://127.0.0.1:8888/" + apiTarget;
-
+$("#tb_skill").tap(function(){
+	console.log("1")
 	$.ajax({
 	  type: 'GET',
-	  url: apiUrl,
+		dataType:'json',
+	  url: "http://www.renxuanxun.online/resume/php/data.php",
+		data:{table: "skill_category"},
 	  success: function(data) {
-	  	var html = "";
-	  	
-	  	for (var i = 0; i < data.length; i++) {
-	  		html += "<li class='Noborder'>"+ data[i].level+""+data[i].category +"：</li><li>" + data[i].name  +"</li>";
-	  	};
-
-	  	$("#scroller ul").html(html);
-	    console.log(data);
+			var html = '';
+			for(var i = 0; i < data.length; i++){
+				html += "<li><img class='myicon' src="+data[i].image+"><div class='myflex'><div class='star_flex'><span class='skill_title'>"+data[i].name+"</span><span>"+data[i].stars+"</span></div><span class='gray'>"+ data[i].content +"</span></div></li>"
+			}
+			$('#scroller ul').html(html);
 	  }
 	});
+})
 
+$("#work").tap(function(){
+	console.log("1")
+	$.ajax({
+	  type: 'GET',
+		dataType:'json',
+	  url: "http://www.renxuanxun.online/resume/php/data.php",
+		data:{table: "work"},
+	  success: function(data) {
+			var html = '';
+			for(var i = 0; i < data.length; i++){
+				html += "<li class='myflex2'><h3>公司名字："+data[i].name+"</h3><span>公司性质："+data[i].categroy+"</span><span>公司规模："+data[i].peoples+"</span><span>在职时间："+data[i].time+"</span><span>职位："+data[i].posts+"</span><span>Report to："+data[i].reportto+"</span><span>做过的项目："+data[i].projects+"</span></li>";
+				
+			}
+			$('#scroller ul').html(html);
+	  }
+	});
+})
 
+$("#project").tap(function(){
+	console.log("1")
+	$.ajax({
+	  type: 'GET',
+		dataType:'json',
+	  url: "http://www.renxuanxun.online/resume/php/data.php",
+		data:{table: "project"},
+	  success: function(data) {
+			var html = '';
+			for(var i = 0; i < data.length; i++){
+				html += "<li class='myflex2'><h3>项目名称："+data[i].name+"</h3><span>项目类型："+data[i].category+"</span><span>项目链接："+data[i].url+"</span><span>项目描述："+data[i].description+"</span><span>项目细节："+data[i].detail+"</span><span>技术要点："+data[i].tech+"</li>";
+				
+			}
+			$('#scroller ul').html(html);
+	  }
+	});
+})
+
+$("#introduce").tap(function(){
+	console.log("1")
+	$.ajax({
+	  type: 'GET',
+		dataType:'json',
+	  url: "http://www.renxuanxun.online/resume/php/data.php",
+		data:{table: "myself"},
+	  success: function(data) {
+			var html = '';
+			for(var i = 0; i < data.length; i++){
+				html += "<li class='myflex2 gray'><span>姓名："+data[i].myname+"</span><span>出生日期："+data[i].birthday+"</span><span>爱好："+data[i].hobby+"</span><span>工作经验："+data[i].experience+"</span><span>电话号码："+data[i].phone+"</span><span>邮箱："+data[i].email+"</span><span class='noborderBottom'>Github地址："+data[i].github+"</span></li>";
+				
+			}
+			$('#scroller ul').html(html);
+	  }
+	});
 })

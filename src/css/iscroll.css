@@ -21,6 +21,9 @@ body {
 }
 
 #header {
+	display: flex;
+	justify-content: space-between;
+	padding: 0 10px;
 	position: absolute;
 	z-index: 2;
 	top: 0;
@@ -28,14 +31,12 @@ body {
 	width: 100%;
 	height: 45px;
 	line-height: 45px;
-	background: #CD235C;
-	padding: 0;
+	background: #7dd89a;
 	color: #eee;
 	font-size: 20px;
 	text-align: center;
 	font-weight: bold;
 }
-
 #footer {
 	position: absolute;
 	z-index: 2;
@@ -43,7 +44,7 @@ body {
 	left: 0;
 	width: 100%;
 	height: 48px;
-	background: #444;
+	background: #7dd89a;
 	padding: 0;
 	border-top: 1px solid #444;
 }
@@ -91,8 +92,7 @@ body {
 
 #scroller li {
 	padding: 0 10px;
-	height: 40px;
-	line-height: 40px;
+	
 	border-bottom: 1px solid #ccc;
 	border-top: 1px solid #fff;
 	background-color: #fafafa;
