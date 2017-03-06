@@ -1,0 +1,349 @@
+<html>
+
+<head>
+	<title>index.html</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+
+</head>
+
+<body>
+	
+	<div class="music_icon"></div>
+	<div class="slide_left"></div>
+	<!-- Swiper -->
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide" id="swipe0">
+				<p class="ani" swiper-animate-effect="bounceInDown" swiper-animate-duration="1s" swiper-animate-delay="0.3s"><img src="resources/images/2017.png" alt=""></p>
+				<p class="text ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="1s">简 历°<b>Resume</b></p>
+				<span class="ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="1.5s">——简而能任，历经沧海</span>
+
+			</div>
+			<div class="swiper-slide" id="swipe1">
+				<div class="shadow"></div>
+
+
+				<div class="swipe1_text ani">
+
+					<p class="ani" swiper-animate-effect="rotateInDownLeft" swiper-animate-duration="0.5s" swiper-animate-delay="1s">姓名：任海</p>
+					<p class="ani" swiper-animate-effect="rotateInDownLeft" swiper-animate-duration="0.5s" swiper-animate-delay="2s">学历：大学本科</p>
+					<p class="ani" swiper-animate-effect="rotateInDownLeft" swiper-animate-duration="0.5s" swiper-animate-delay="3s">毕业院校：成都信息工程学院</p>
+					<p class="ani" swiper-animate-effect="rotateInDownLeft" swiper-animate-duration="0.5s" swiper-animate-delay="4s">应聘岗位：前端应用开发工程师</p>
+					<p class="ani" swiper-animate-effect="rotateInDownLeft" swiper-animate-duration="0.5s" swiper-animate-delay="5s">工作经验：2年</p>
+					<p class="ani" swiper-animate-effect="rotateInDownLeft" swiper-animate-duration="0.5s" swiper-animate-delay="6s">联系方式：15928744355(TEL)</p>
+					<div class="saohua">
+						<h3 class="ani" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="0.5s">We, </h3>
+						<br>
+						<span class="ani" swiper-animate-effect="zoomInDown" swiper-animate-duration="1.5s" swiper-animate-delay="1s">Every single one is unique。</span></div>
+				</div>
+
+			</div>
+
+			<!-- swipe second page -->
+			<!--<div class="swiper-slide" id="swipe2">
+				<div class="shadow"></div>
+				<div class="ani swipe2_title" swiper-animate-effect="fadeInUp">大学经历</div>
+				<p class="ani swipe2_text1" swiper-animate-effect="fadeInLeft" swiper-animate-delay="1s">在校期间，在系学生会担任部门部长一职</p>
+				<p class="ani swipe2_text2" swiper-animate-effect="fadeInRight" swiper-animate-delay="2s">在班级担任学习委员，协助老师解决同学学习上的疑问</p>
+				<p class="ani swipe2_text3" swiper-animate-effect="fadeInLeft" swiper-animate-delay="3s">参加社会实践 - 三下乡</p>
+				<p class="ani swipe2_text4" swiper-animate-effect="fadeInRight" swiper-animate-delay="4s">利用节假日期间，去酒吧、电影院、商场等地方兼职</p>
+			</div>-->
+			<div class="swiper-slide" id="swipe3">
+				<p class="ani">每一次的攀登，只为更美的风景。</p>
+				<p id="enter">了解详情</p>
+			</div>
+
+		</div>
+	</div>
+
+	<div id="bcid" style="width: 100%;height: 80%;display: none;"></div>
+	<button type="button" class="mui-btn mui-btn-danger" id="closeScan" style="background: #dd524d;">关闭</button>
+	<div id="mainContent">
+		
+		<header class="mui-bar mui-bar-nav">
+			
+			<!--右上角弹出菜单-->
+		<div id="topPopover" class="mui-popover" style="display: block; top: 57px; right: 0px; width: 50%; left: 154px; height:23%;">
+			<div class="mui-popover-arrow"></div>
+			<div class="mui-scroll-wrapper">
+				<div class="mui-scroll">
+					<ul class="mui-table-view">
+						<li class="mui-table-view-cell"><span class="mui-icon mui-icon-camera" id='photo'><a class="text_pop">相机</a></span></li>
+						<li class="mui-table-view-cell"><span class="mui-icon mui-icon-extra mui-icon-extra-sweep mui-pull-right" id="barcode" style="margin-right: 0px"><a class="text_pop" style="vertical-align:middle">二维码扫描</a></span>
+						</li>
+						<li class="mui-table-view-cell"><span class="mui-icon mui-icon-paperplane mui-pull-right" id="share" style="margin-right: 0px"><a class="text_pop">分享到朋友圈</a></span>
+						</li>
+						
+					</ul>
+				</div>
+			</div>
+		</div>
+
+			<h1 class="mui-title">单简</h1>
+			
+			<a id="menu" class="mui-action-menu mui-icon mui-icon-bars mui-pull-right" id="xiala" href="#topPopover"></a>
+			<!--<span class="mui-icon mui-icon-paperplane mui-pull-right" id="share" style="margin-right: 0px"></span>
+			<span class="mui-icon mui-icon-extra mui-icon-extra-sweep mui-pull-right" id="barcode" style="margin-right: 0px"></span>-->
+		</header>
+
+		<nav class="mui-bar mui-bar-tab">
+			<a class="mui-tab-item mui-active" href="#tabbar">
+				<span class="mui-icon iconfont icon-moban2xiangguanjineng
+项目
+"></span>
+					<span class="mui-tab-label">技能</span>
+			</a>
+			<a class="mui-tab-item" href="#tabbar-with-chat">
+				<span class="mui-icon iconfont icon-gongzuojingli"><span class="mui-badge">9</span></span>
+				<span class="mui-tab-label">经历</span>
+			</a>
+			<a class="mui-tab-item" href="#tabbar-with-contact">
+				<span class="mui-icon iconfont icon-xiangmujingli
+"></span>
+					<span class="mui-tab-label">项目</span>
+			</a>
+			<a class="mui-tab-item" href="#tabbar-with-map">
+				<span class="mui-icon iconfont icon-my-on"></span>
+				<span class="mui-tab-label">我</span>
+			</a>
+		</nav>
+		<div class="mui-content">
+			<!--技能页面-->
+			<div id="tabbar" class="mui-control-content mui-active">
+
+
+
+			</div>
+
+			<!--经历页面-->
+			<div id="tabbar-with-chat" class="mui-control-content">
+				<div class="mui-content">
+
+					<div class="mui-card">
+						<div class="mui-card-header mui-card-media">
+							<img id="logo_cuit" src="./resources/images/cuit.jpg" />
+							<div class="mui-media-body">
+								CUIT
+								<p><span class="mui-icon mui-icon-location" style="font-size: 19px;"></span>成都市双流县西航港开发区学府路一段24号</p>
+							</div>
+							<!--<img class="mui-pull-left" src="../images/logo.png" width="34px" height="34px" />
+					<h2>小M</h2>
+					<p>发表于 2016-06-30 15:30</p>-->
+						</div>
+						<div class="mui-card-content">
+							<div id="slider" class="mui-slider">
+								<div class="mui-slider-group mui-slider-loop">
+									<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+									<div class="mui-slider-item mui-slider-item-duplicate">
+										<a href="#">
+											<img src="./resources/images/cuit6.jpg">
+										</a>
+									</div>
+									<!-- 第一张 -->
+									<div class="mui-slider-item">
+										<a href="#">
+											<img src="./resources/images/cuit1.jpg">
+										</a>
+									</div>
+									<!-- 第二张 -->
+									<div class="mui-slider-item">
+										<a href="#">
+											<img src="./resources/images/cuit2.jpg">
+										</a>
+									</div>
+									<!-- 第三张 -->
+									<div class="mui-slider-item">
+										<a href="#">
+											<img src="./resources/images/cuit3.jpg">
+										</a>
+									</div>
+									<!-- 第四张 -->
+									<div class="mui-slider-item">
+										<a href="#">
+											<img src="./resources/images/cuit4.jpg">
+										</a>
+									</div>
+									<!-- 第五张 -->
+									<div class="mui-slider-item">
+										<a href="#">
+											<img src="./resources/images/cuit5.jpg">
+										</a>
+									</div>
+									<!-- 第六张 -->
+									<div class="mui-slider-item">
+										<a href="#">
+											<img src="./resources/images/cuit6.jpg">
+										</a>
+									</div>
+									<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+									<div class="mui-slider-item mui-slider-item-duplicate">
+										<a href="#">
+											<img src="./resources/images/cuit1.jpg">
+										</a>
+									</div>
+								</div>
+								<div class="mui-slider-indicator">
+									<div class="mui-indicator mui-active"></div>
+									<div class="mui-indicator"></div>
+									<div class="mui-indicator"></div>
+									<div class="mui-indicator"></div>
+									<div class="mui-indicator"></div>
+									<div class="mui-indicator"></div>
+									<div class="describle">哈哈哈哈哈，还是说点什么吧，我也不知道要说什么。哈哈哈哈哈，还是说点什么吧，我也不知道要说什么。哈哈哈哈哈，还是说点什么吧，我也不知道要说什么。哈哈哈哈哈，还是说点什么吧，我也不知道要说什么。哈哈哈哈哈，还是说点什么吧，我也不知道要说什么。哈哈哈哈哈，还是说点什么吧，我也不知道要说什么。哈哈哈哈哈，还是说点什么吧，我也不知道要说什么。哈哈哈哈哈，还是说点什么吧，我也不知道要说什么。哈哈哈哈哈，还是说点什么吧，我也不知道要说什么。哈哈哈哈哈，还是说点什么吧，我也不知道要说什么。哈哈哈哈哈，还是说点什么吧，我也不知道要说什么。</div>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="mui-card-footer">
+							<a class="mui-card-link">Like</a>
+							<a class="mui-card-link">Comment</a>
+							<a class="mui-card-link">Read more</a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<!--第三个页面-->
+			<div id="tabbar-with-contact" class="mui-control-content">
+				<div class="mui-content">
+					<div class="mui-content-padded mui-card">
+
+						<div class="mui-card-content">
+							<div class="mui-card-header project_header">
+								<p class="title">次元仓--最好玩的二次元周边网站</p>
+							</div>
+
+							<p>
+								<img src="./resources//images/ciyuancang.png" data-preview-src="" data-preview-group="1" />
+							</p>
+							<p class="text_indent">最好玩的二次元周边网站,二次元,ACG,精品,正品,特卖,游戏,便捷、诚信的服务,为您提供愉悦的购物体验!</p>
+						</div>
+						<div class="mui-card-content">
+							<p>
+								<img src="./resources/images/ciyuancang_list.png" data-preview-src="" data-preview-group="1" />
+							</p>
+
+							<p>
+								<img src="./resources/images/ciyuancang_login.png" data-preview-src="" data-preview-group="1" />
+							</p>
+							<div class="mui-card-footer text_indent">
+								该项目从前端页面架构到后台数据以及前后结合，耗时5个月，项目开发人员为前端2人，后台1人。我负责的是前台页面登录、注册、购物车、订单页面的静态布局以及整个项目的数据动态获取添加到页面。
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--第四个页面-->
+			<div id="tabbar-with-map" class="mui-control-content">
+				<div class="title">About Me.</div>
+
+				<ul class="mui-table-view">
+
+					<li class="mui-table-view-cell">
+						<a class="">
+						任海
+					</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a class="">
+						出生年月
+					</a>
+						<a class="inform">
+						2017年3月3日
+					</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a class="">
+						工作经验
+					</a>
+						<a class="inform">
+						2年
+					</a>
+					</li>
+				</ul>
+				<p class="title">My Hobbies</p>
+				<ul class="mui-table-view" style="margin-top: 25px;">
+					<li class="mui-table-view-cell">
+						<a class="">
+						篮球、吉他、民谣音乐、动漫
+					</a>
+
+					</li>
+				</ul>
+
+				<p class="title">Contact Me</p>
+				<ul class="mui-table-view" style="margin-top: 25px;">
+					<li class="mui-table-view-cell">
+						<a class="">
+						手机号码
+					</a>
+						<a class="inform">
+						15928744355
+					</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a class="">
+						邮箱
+					</a>
+						<a class="inform">
+						renxuanxun@gmail.com
+					</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a class="">
+						Git账号
+					</a>
+						<a class="inform">
+						RookiEzz
+					</a>
+					</li>
+				</ul>
+				<div class="mui-content-padded" id="pop">
+					<p>
+						<a href="#contact" id="btn_enter" class="mui-btn mui-btn-primary mui-btn-block mui-btn-outlined" style="padding: 5px 20px;">
+							让此人进入本公司
+						</a>
+					</p>
+				</div>
+				<div id="contact" class="mui-popover mui-popover-action mui-popover-bottom">
+					<ul class="mui-table-view">
+						<li class="mui-table-view-cell popEle">
+							<a href="tel:15928744355">电话联系</a>
+						</li>
+						<li class="mui-table-view-cell popEle">
+							<a href="sms:15928744355?body=恭喜你通过本公司面试">短信联系</a>
+						</li>
+						<li class="mui-table-view-cell popEle">
+							<a href="mailto:renxuanxun@gmail.com">邮箱联系</a>
+						</li>
+						
+
+					</ul>
+					<ul class="mui-table-view">
+						<li class="mui-table-view-cell popEle">
+							<a href="#contact"><b>取消</b></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="./js/mui.min.js"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script src="./js/mui.previewimage.js"></script>
+	<script src="./js/mui.zoom.js"></script>
+	<script>
+		mui.previewImage();
+		
+		
+		
+	</script>
+</body>
+
+</html>
