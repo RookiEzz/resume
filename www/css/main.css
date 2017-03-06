@@ -206,11 +206,57 @@
 #swipe3 {
   font-size: 18px;
   background: url(../resources/images/mountain.jpg); }
+  #swipe3 p {
+    font-size: 20px;
+    color: white; }
 
 #enter {
   border: 1px solid white;
-  padding: 2em; }
+  padding: 1em;
+  background: #6cd023; }
 
 .Noborder {
   border: 0;
   background: red; }
+
+.myicon {
+  width: 60px;
+  height: 60px;
+  margin-right: 20px; }
+
+#scroller li {
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px; }
+
+.myflex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%; }
+
+.skill_title {
+  font-size: 18px;
+  font-family: '微软雅黑';
+  font-weight: 600;
+  color: rgba(68, 41, 10, 0.96); }
+
+.star_flex {
+  display: flex;
+  justify-content: space-between; }
+
+.gray {
+  color: gray; }
+
+.myflex2 {
+  display: flex;
+  flex-direction: column; }
+  .myflex2 span {
+    margin: 10px 0; }
+
+.gray span {
+  padding-bottom: 10px;
+  border-bottom: 1px dotted gray; }
+
+.gray .noborderBottom {
+  border: 0; }
